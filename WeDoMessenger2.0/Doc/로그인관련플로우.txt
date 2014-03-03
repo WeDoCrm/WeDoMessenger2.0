@@ -1,0 +1,71 @@
+﻿SetLoginValueTemp   로그인입력값 지정
+StartService 접속 및 로그인
+	SendMsgLogIn
+StopService  로그아웃 및 접속종료 
+	SendMsgLogOut 로그아웃요청
+EnableLoginInput 로그인입력창활성화
+ClearResourceOnClosing 쓰레드종료
+DisposeForms 창종료
+EnableLogOnCtrl 메뉴모드전환
+SwitchLoginTrialMode 로그인 시도 화면
+LogInPanelVisible 로그인 전후 화면
+
+
+-최초로그인
+      if (autoLogin)  id, pwd, savepass, autologin ==> true
+         StartService 
+             
+                          EnableLoginCtrl = false 로그인입력창 비활성화
+                          if connection.start
+                          오류메시지
+                          로그인초기화면
+                          endif
+                          connection.dologin
+                                                    if (connection)loginPassed
+                                                       로그인성공OnLoginPassed
+                         로그인성공화면<--------------                              
+                                                    if (connection)loginfail
+                                                       로그인실패OnLoginFailed
+                         로그인실패화면<--------------
+                                                    if (connection)logindup
+                                                       로그인중복OnLoginDupped     
+                         로그인중복화면<--------------
+      else
+         SetInitLoginMode=true
+
+-로그인실패   OnLoginFailed
+	EnableLoginCtrl = false 로그인입력창 비활성화
+   중복메시지
+   로그인초기화면
+
+-재로그인 가이드 OnLoginDupped
+   중복메시지
+   로그인초기화면
+
+-로그인성공  OnLoginPassed
+   로딩 메시지
+   접속화면 로딩작업
+
+-로그인정보수신  OnReceiving
+   로그인정보구성
+
+-로그인정보수신완료 OnReceiveDone
+   접속상태모드 전환
+		-트리목록/메뉴/버튼/툴팁 보이기 EnableLogOnCtrl=true
+		-로그인화면 안보이기 LogInPanelVisible = false
+
+-로그인시도  OnServerOK if Server Failed
+	로그인시도화면
+	StartService
+    
+-로그인시도  OnServerFail
+	로그인시도화면
+	로그아웃	
+
+   
+-강제접속해제
+   if 서버강제종료 메시지
+   		로그아웃진행
+-로그아웃
+	
+-종료

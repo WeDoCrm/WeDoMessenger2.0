@@ -1,0 +1,672 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BF421C0E-81B7-482F-AA8B-313AFE0A44A8}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>wedo.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>WDMsg_Client</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Client</RootNamespace>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ManifestCertificateThumbprint>6ACEE4E7340CC94BF17317033B15EA1A9D08FDB2</ManifestCertificateThumbprint>
+    <ManifestKeyFile>Client_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <PublishUrl>C:\Users\ㄱ\Desktop\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;DEBUG;WEDO_MSGR</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;WEDO_MSGR</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>pdbonly</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CRMmanager, Version=2.1.1.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\CRM_Product\CRMmanager\CRMmanager\bin\Release\CRMmanager.dll</HintPath>
+    </Reference>
+    <Reference Include="Elegant.Ui.Common, Version=4.2.0.0, Culture=neutral, PublicKeyToken=3a2b400713aae6e0, processorArchitecture=MSIL" />
+    <Reference Include="Elegant.Ui.Common.Theme.Office2010Blue, Version=4.2.0.0, Culture=neutral, PublicKeyToken=3a2b400713aae6e0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\FOSS Software Inc\Elegant Ribbon\Bin\Themes\Elegant.Ui.Common.Theme.Office2010Blue.dll</HintPath>
+    </Reference>
+    <Reference Include="Elegant.Ui.Grid, Version=4.2.0.0, Culture=neutral, PublicKeyToken=3a2b400713aae6e0, processorArchitecture=MSIL" />
+    <Reference Include="Elegant.Ui.Grid.Theme.Office2010Blue, Version=4.2.0.0, Culture=neutral, PublicKeyToken=3a2b400713aae6e0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\FOSS Software Inc\Elegant Ribbon\Bin\Themes\Elegant.Ui.Grid.Theme.Office2010Blue.dll</HintPath>
+    </Reference>
+    <Reference Include="Elegant.Ui.NavigationBar, Version=4.2.0.0, Culture=neutral, PublicKeyToken=3a2b400713aae6e0, processorArchitecture=MSIL" />
+    <Reference Include="Elegant.Ui.NavigationBar.Theme.Office2010Blue, Version=4.2.0.0, Culture=neutral, PublicKeyToken=3a2b400713aae6e0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\FOSS Software Inc\Elegant Ribbon\Bin\Themes\Elegant.Ui.NavigationBar.Theme.Office2010Blue.dll</HintPath>
+    </Reference>
+    <Reference Include="Elegant.Ui.Ribbon, Version=4.2.0.0, Culture=neutral, PublicKeyToken=3a2b400713aae6e0, processorArchitecture=MSIL" />
+    <Reference Include="Elegant.Ui.Ribbon.Theme.Office2010Blue, Version=4.2.0.0, Culture=neutral, PublicKeyToken=3a2b400713aae6e0, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files\FOSS Software Inc\Elegant Ribbon\Bin\Themes\Elegant.Ui.Ribbon.Theme.Office2010Blue.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="SkinSoft.AquaSkin, Version=1.1.0.0, Culture=neutral, PublicKeyToken=24427c624576b01d" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App.ico" />
+    <Content Include="Doc\history.txt" />
+    <Content Include="Doc\readme.txt" />
+    <Content Include="Doc\로그인관련플로우.txt" />
+    <None Include="Resources\btn_cancel.png" />
+    <None Include="Resources\다른용무중.png" />
+    <None Include="Resources\로그아웃.png" />
+    <None Include="Resources\부재중.png" />
+    <None Include="Resources\온라인.png" />
+    <None Include="Resources\통화중.png" />
+    <None Include="Resources\img_notice_e.png" />
+    <None Include="Resources\img_notice_n.png" />
+    <None Include="Resources\img_stat_away.png" />
+    <None Include="Resources\img_stat_busy.png" />
+    <None Include="Resources\img_stat_in.png" />
+    <None Include="Resources\img_stat_out.png" />
+    <None Include="Resources\wedo_logo.png" />
+    <None Include="Resources\wedo.ico" />
+    <None Include="Resources\고객관리_이미지만.png" />
+    <None Include="Resources\btn_closesize.png" />
+    <None Include="Resources\btn_closesize_over.png" />
+    <None Include="Resources\btn_call_over.png" />
+    <None Include="Resources\공지하기_이미지만.png" />
+    <None Include="Resources\greenpapersmall.png" />
+    <None Include="Resources\redpapersmall.png" />
+    <None Include="Resources\Flag-green-icon24.png" />
+    <None Include="Resources\Flag-green-icon16.png" />
+    <None Include="Resources\Flag-red-icon16.png" />
+    <None Include="Resources\공지.png" />
+    <None Include="Resources\투명.png" />
+    <None Include="Resources\공지16.png" />
+    <None Include="Resources\foss06\ID_EDIT_COPY_SMALL.png" />
+    <None Include="Resources\foss06\ID_EDIT_CUT_SMALL.png" />
+    <None Include="Resources\foss06\pastesmall.png" />
+    <None Include="Resources\foss06\AutomaticColor.png" />
+    <None Include="Resources\foss01\addcontrolsgroup.png" />
+    <None Include="Resources\Windows-Close-Program-icon 16.png" />
+    <None Include="Resources\Actions-file-close-icon.png" />
+    <None Include="Resources\delete-icon16.png" />
+    <None Include="Resources\Close-icon16.png" />
+    <Content Include="Sockets\내용설명.txt" />
+    <Content Include="wedo.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="Common\ConfigFileHandler.cs" />
+    <Compile Include="Common\FileSizeFormatProvider.cs" />
+    <Compile Include="Common\MsgDef.cs" />
+    <Compile Include="Common\UserDef.cs" />
+    <Compile Include="Common\ZipUtil.cs" />
+    <Compile Include="Common\ChatUtils.cs" />
+    <Compile Include="Crm\CustomerScheduler.cs" />
+    <Compile Include="Ctrl\ClientFormChat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ctrl\ClientFormETC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ctrl\ClientFormEvents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ctrl\ClientFormFTP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ctrl\CrmHelper.cs" />
+    <Compile Include="Ctrl\Delegates.cs" />
+    <Compile Include="Ctrl\Members.cs" />
+    <Compile Include="Ctrl\MiscController.cs" />
+    <Compile Include="Ctrl\MsgrConnection.cs" />
+    <Compile Include="Ctrl\MsgrConnectionOnEvent.cs" />
+    <Compile Include="Ctrl\MsgrConnectionFilter.cs" />
+    <Compile Include="Ctrl\ConfigHelper.cs" />
+    <Compile Include="Ctrl\MsgrConnectionCommand.cs" />
+    <Compile Include="Ctrl\ManageableForms.cs" />
+    <Compile Include="Ctrl\ManagerableThreads.cs" />
+    <Compile Include="Ctrl\MsgrConnectionFTP.cs" />
+    <Compile Include="Ctrl\ClientFormCtrl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Etc\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Etc\AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddMemberForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMemberForm.Designer.cs">
+      <DependentUpon>AddMemberForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ChatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChatForm.Designer.cs">
+      <DependentUpon>ChatForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Client_Form.Designer.cs">
+      <DependentUpon>Client_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\CtrlUtils.cs" />
+    <Compile Include="Common\Logger.cs" />
+    <Compile Include="Common\MemoUtils.cs" />
+    <Compile Include="FileTrns\DownloadForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileTrns\DownloadForm.Designer.cs">
+      <DependentUpon>DownloadForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Object\AbstractNoticeObj.cs" />
+    <Compile Include="Object\MemberObj.cs" />
+    <Compile Include="Object\MemoObj.cs" />
+    <Compile Include="Object\NoticeObj.cs" />
+    <Compile Include="Object\NumberedNoticeObj.cs" />
+    <Compile Include="Object\TransferObj.cs" />
+    <Compile Include="Object\UnCheckedNoticeObj.cs" />
+    <Compile Include="Object\UserListedNoticeObj.cs" />
+    <Compile Include="Object\AbstractMemoObj.cs" />
+    <Compile Include="Object\NumberedMemoObj.cs" />
+    <Compile Include="Object\UnCheckedTransferObj.cs" />
+    <Compile Include="Object\ChatObj.cs" />
+    <Compile Include="PopUp\FlashWindowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopUp\FlashWindowForm.Designer.cs">
+      <DependentUpon>FlashWindowForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopUp\TopMostForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopUp\TopMostForm.Designer.cs">
+      <DependentUpon>TopMostForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sockets\Constant.cs" />
+    <Compile Include="Sockets\FtpClientManager.cs" />
+    <Compile Include="Sockets\Logger.cs" />
+    <Compile Include="Sockets\MiscObjs.cs" />
+    <Compile Include="Sockets\MsgrClientManager.cs" />
+    <Compile Include="Sockets\ServerListeners.cs" />
+    <Compile Include="Sockets\ServerManager.cs" />
+    <Compile Include="Sockets\SocketClient.cs" />
+    <Compile Include="Sockets\SyncSocket.cs" />
+    <Compile Include="Sockets\TcpClientManager.cs" />
+    <Compile Include="Sockets\Utils.cs" />
+    <Compile Include="Common\Utils.cs" />
+    <Compile Include="Client_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogContent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogContent.Designer.cs">
+      <DependentUpon>DialogContent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DialogListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogListForm.Designer.cs">
+      <DependentUpon>DialogListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileTrns\DownloadResultForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileTrns\DownloadResultForm.Designer.cs">
+      <DependentUpon>DownloadResultForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileSendDetailListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileSendDetailListView.Designer.cs">
+      <DependentUpon>FileSendDetailListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindListForm.Designer.cs">
+      <DependentUpon>FindListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindTextForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindTextForm.Designer.cs">
+      <DependentUpon>FindTextForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Etc\log.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Etc\log.Designer.cs">
+      <DependentUpon>log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemoListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemoListForm.Designer.cs">
+      <DependentUpon>MemoListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MissedCallForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MissedCallForm.Designer.cs">
+      <DependentUpon>MissedCallForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MissedCallList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MissedCallList.Designer.cs">
+      <DependentUpon>MissedCallList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\MsgrDef.cs" />
+    <Compile Include="NoReceiveBoardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NoReceiveBoardForm.Designer.cs">
+      <DependentUpon>NoReceiveBoardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notice.Designer.cs">
+      <DependentUpon>Notice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NoticeDetailResultForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NoticeDetailResultForm.Designer.cs">
+      <DependentUpon>NoticeDetailResultForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NoticeListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NoticeListForm.Designer.cs">
+      <DependentUpon>NoticeListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NoticeResultForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NoticeResultForm.Designer.cs">
+      <DependentUpon>NoticeResultForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotifyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotifyForm.Designer.cs">
+      <DependentUpon>NotifyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotReadMemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotReadMemoForm.Designer.cs">
+      <DependentUpon>NotReadMemoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotReadNoticeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotReadNoticeForm.Designer.cs">
+      <DependentUpon>NotReadNoticeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileTrns\NotReceiveFileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileTrns\NotReceiveFileForm.Designer.cs">
+      <DependentUpon>NotReceiveFileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopForm.Designer.cs">
+      <DependentUpon>PopForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RequestUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RequestUpdate.Designer.cs">
+      <DependentUpon>RequestUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SendNoticeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SendNoticeForm.Designer.cs">
+      <DependentUpon>SendNoticeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileTrns\SendFileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileTrns\SendFileForm.Designer.cs">
+      <DependentUpon>SendFileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SendMemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SendMemoForm.Designer.cs">
+      <DependentUpon>SendMemoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemoForm.Designer.cs">
+      <DependentUpon>MemoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SetAutoStartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetAutoStartForm.Designer.cs">
+      <DependentUpon>SetAutoStartForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetExtensionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetExtensionForm.Designer.cs">
+      <DependentUpon>SetExtensionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetServer_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="TransferNotiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransferNotiForm.Designer.cs">
+      <DependentUpon>TransferNotiForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Etc\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddMemberForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AddMemberForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChatForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ChatForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Client_Form.resx">
+      <DependentUpon>Client_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogContent.resx">
+      <DependentUpon>DialogContent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogListForm.resx">
+      <DependentUpon>DialogListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileTrns\DownloadResultForm.resx">
+      <DependentUpon>DownloadResultForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileSendDetailListView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FileSendDetailListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileTrns\DownloadForm.resx">
+      <DependentUpon>DownloadForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindListForm.resx">
+      <DependentUpon>FindListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindTextForm.resx">
+      <DependentUpon>FindTextForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Etc\log.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>log.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemoListForm.resx">
+      <DependentUpon>MemoListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MissedCallForm.resx">
+      <DependentUpon>MissedCallForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MissedCallList.resx">
+      <DependentUpon>MissedCallList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NoReceiveBoardForm.resx">
+      <DependentUpon>NoReceiveBoardForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notice.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Notice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NoticeDetailResultForm.resx">
+      <DependentUpon>NoticeDetailResultForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NoticeListForm.resx">
+      <DependentUpon>NoticeListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NoticeResultForm.resx">
+      <DependentUpon>NoticeResultForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotifyForm.resx">
+      <DependentUpon>NotifyForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotReadMemoForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NotReadMemoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotReadNoticeForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NotReadNoticeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileTrns\NotReceiveFileForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NotReceiveFileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopForm.resx">
+      <DependentUpon>PopForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopUp\FlashWindowForm.resx">
+      <DependentUpon>FlashWindowForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopUp\TopMostForm.resx">
+      <DependentUpon>TopMostForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RequestUpdate.resx">
+      <DependentUpon>RequestUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileTrns\SendFileForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SendFileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SendMemoForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SendMemoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemoForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MemoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SendNoticeForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SendNoticeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetAutoStartForm.resx">
+      <DependentUpon>SetAutoStartForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetExtensionForm.resx">
+      <DependentUpon>SetExtensionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetServer_Form.resx">
+      <DependentUpon>SetServer_Form.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferNotiForm.resx">
+      <DependentUpon>TransferNotiForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Doc\history.txt.bak" />
+    <None Include="Doc\readme.txt.bak" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="고객정보대장-샘플.xlsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0%28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0%28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="lib\" />
+    <Folder Include="Network\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
